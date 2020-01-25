@@ -1,0 +1,12 @@
+{
+  "name": "@shpindler/nuxt-global-components",
+  "version": "1.0.0",
+  "description": "Nuxt.js модуль. Глобально регистрирует Vue-компоненты из папки components/Global.",
+  "main": "index.js",
+  "author": "Alexander Shpindler <www.shpindler.com@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "vue": "^2.6.11"
+  }
+}
