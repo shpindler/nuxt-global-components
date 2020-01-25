@@ -6,7 +6,7 @@ export default function (moduleOptions = {}) {
   }
 
   this.addPlugin({
-    src: path.resolve(__dirname, 'plugin.js')),
+    src: path.resolve(__dirname, 'plugin.js'),
     options: { path: moduleOptions.path }
   })
 }
