@@ -3,7 +3,7 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 
 export default () => {
-  const requireComponent = require.context(<%= options.path %>)
+  const requireComponent = require.context('<%= options.path %>')
   requireComponent.keys().forEach(fileName => {
      const componentConfig = requireComponent(fileName)
      const componentName = upperFirst(camelCase(
