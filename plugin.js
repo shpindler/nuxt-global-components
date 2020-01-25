@@ -1,11 +1,9 @@
-/** Глобально регистрирует компоненты из папок components/Global. */
-
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 
 export default () => {
-  const requireComponent = require.context('Global')
+  const requireComponent = require.context(<%= options.path %>)
   requireComponent.keys().forEach(fileName => {
      const componentConfig = requireComponent(fileName)
      const componentName = upperFirst(camelCase(
