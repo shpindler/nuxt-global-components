@@ -1,5 +1,5 @@
-const path = require('path')
+import path from 'path'
 
 export default function () {
-  this.addPlugin(path.resolve(__dirname), 'plugin.js')
+  this.addPlugin(path.resolve(__dirname, 'plugin.js'))
 }
