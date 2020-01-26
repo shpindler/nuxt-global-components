@@ -1,14 +1,14 @@
 import path from 'path'
 
 export default function (moduleOptions) {
-  const _moduleOptions = moduleOptions || this.options.globalComponents
+  const options = { ...this.options.globalComponents, ...moduleOptions }
   
-  if (!_moduleOptions || !_moduleOptions.path) {
+  if (!options.path) {
     throw new Error('Please, specify "path" option.')
   }
 
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
-    options: { path: _moduleOptions.path }
+    options: { path: options.path }
   })
 }
